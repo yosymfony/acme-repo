@@ -12,8 +12,8 @@ class AcmeCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln('Welcome to ACME Corp.');
-        
+        $output->writeln('Welcome to ACME Corporation.');
+
         return 0;
     }
 }
