@@ -12,7 +12,7 @@ class AcmeCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln('Welcome to ACME Corporation.');
+        $output->writeln('Welcome to ACME Corp.');
 
         return 0;
     }
