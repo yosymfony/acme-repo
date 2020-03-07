@@ -8,7 +8,7 @@ rules:
   - rule: "All modified code files must have an associated test file"
     mandatory: true
     conditions:
-      - all(plugins.get('github').code, plugins.get('github').test, 'code,test -> test.pathname == code.path ~ "/" ~ code.filename ~ "Test." ~ code.extension')
+      - all(plugins.get('github').code, plugins.get('github').test, 'code,test -> test.filename == code.file ~ "Test." ~ code.extension')
  
   - rule: "All commit messages must be between 5 and 100 characters"
     mandatory: false
