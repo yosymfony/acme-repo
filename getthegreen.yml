@@ -8,9 +8,9 @@ rules:
   - rule: "All modified code files must have an associated test file"
     mandatory: true
     conditions:
-      - all(github.code, github.test, 'code,test -> test.filename == code.file ~ "Test." ~ code.extension')
+      - all(github.pr_code_files, github.pr_test_files, 'code,test -> test.filename == code.file ~ "Test." ~ code.extension')
  
   - rule: "All commit messages must be between 5 and 100 characters"
     mandatory: false
     conditions:
-      - every(github.prCommits, 'x -> x.message.length() >= 5 && x.message.length() <= 100')
+      - every(github.pr_commits, 'x -> x.message.length() >= 5 && x.message.length() <= 100')
