@@ -10,7 +10,4 @@ rules:
     conditions:
       - all(github.pr_code_files, github.pr_test_files, 'code,test -> test.filename == code.file ~ "Test." ~ code.extension')
  
-  - rule: "All commit messages must be between 5 and 100 characters"
-    mandatory: false
-    conditions:
-      - every(github.pr_commits, 'x -> x.message.length() >= 5 && x.message.length() <= 100')
+  - rule-id: github_commit_message
