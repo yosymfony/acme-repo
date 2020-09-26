@@ -10,4 +10,4 @@ rules:
     conditions:
       - all(github.pr_code_files, github.pr_test_files, 'code,test -> test.filename == code.file ~ "Test." ~ code.extension')
  
-  - rule-id: github_commit_message
+  - rule_id: github_commit_message
