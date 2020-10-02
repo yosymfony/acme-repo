@@ -8,4 +8,4 @@ rules:
   - rule_id: github_pr_missing_test
     mandatory: true
 
-  - rule_id: github_commit_message
+  - rule_id: github_pr_commit_messages
