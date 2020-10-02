@@ -5,9 +5,7 @@ config:
     path: "tests/"
   
 rules:
-  - rule: "All modified code files must have an associated test file"
+  - rule_id: github_pr_missing_test
     mandatory: true
-    conditions:
-      - all(github.pr_code_files, github.pr_test_files, 'code,test -> test.filename == code.file ~ "Test." ~ code.extension')
- 
+
   - rule_id: github_commit_message
