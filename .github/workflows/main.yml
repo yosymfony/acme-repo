@@ -8,4 +8,4 @@ jobs:
     - name: Analyse the code step
       uses: getthegreen/client-action@master
       with:
-        gtg-key: {{ secrets.GTG_KEY }}
+        gtg-key: ${{ secrets.GTG_KEY }}
