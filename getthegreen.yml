@@ -1,0 +1,11 @@
+config:
+  source:
+    path: "src/"
+  test:
+    path: "tests/"
+  
+rules:
+  - rule_id: github_pr_missing_test
+    mandatory: true
+
+  - rule_id: github_pr_commit_messages
