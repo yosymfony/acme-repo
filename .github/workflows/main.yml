@@ -6,6 +6,6 @@ jobs:
     name: A job to analyse the code with Get the Green client
     steps:
     - name: Analyse the code step
-      uses: getthegreen/client-action@master
+      uses: codeobservability/client-action@master
       with:
-        gtg-key: ${{ secrets.GTG_KEY }}
+        co-repo-key: ${{ secrets.CO_REPO_KEY }}
