@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to analyse the code with Get the Green client
     steps:
+    - uses: actions/checkout@v1
     - name: Analyse the code step
       uses: codeobservability/client-action@master
       with:
