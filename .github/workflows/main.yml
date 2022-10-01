@@ -6,6 +6,8 @@ jobs:
     name: Analyse the code with Code Observability
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - name: Analyse the code step
       uses: codeobservability/client-action@master
       with:
