@@ -9,6 +9,6 @@ jobs:
       with:
         fetch-depth: 0
     - name: Analyse the code step
-      uses: codeobservability/client-action@master
+      uses: codeobservability/analyzer-action@master
       with:
         co-repo-key: ${{ secrets.CO_REPO_KEY }}
