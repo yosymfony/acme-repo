@@ -3,10 +3,12 @@ on: [pull_request]
 jobs:
   analyse_code_job:
     runs-on: ubuntu-latest
-    name: A job to analyse the code with Get the Green client
+    name: Analyse the code with Code Observability
     steps:
-    - uses: actions/checkout@v1
-    - name: Analyse the code step
-      uses: codeobservability/client-action@master
+    - uses: actions/checkout@v3
       with:
-        co-repo-key: ${{ secrets.CO_REPO_KEY }}
+        fetch-depth: 0
+    - name: Analyse the code step
+      uses: codeobservability/analyzer-action@master
+      with:
+        co_repo_key: ${{ secrets.CO_REPO_KEY }}
